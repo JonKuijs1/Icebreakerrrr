@@ -1,0 +1,87 @@
+body {
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    width: calc(100% - 120px); /* Adjust input width to leave space for the button */
+    max-width: 300px; /* Limit max width for larger screens */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#wordDisplay {
+    font-size: 24px;
+    margin: 20px 0;
+    letter-spacing: 2px;
+}
+
+#lettersGuessed, #gameStatus {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#hangmanImage img {
+    max-width: 60%;
+    height: auto;
+    margin-left: auto;
+    display: flex;
+    margin-right: auto;;
+}
+
+@media (max-width: 600px) {
+    input[type="text"], button {
+        width: 100%;
+        margin: 10px 0; /* Stack input and button vertically on smaller screens */
+    }
+    #letterInput {
+        width: calc(100% - 20px); /* Adjust width for mobile to account for padding */
+    }
+}
+
+#restartButton {
+    margin-top: 20px;
+}
+
+#gameSection, #restartButton {
+    display: none; /* Initially hidden */
+}
+
+#wordSubmissionSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+
+    h3 {
+        text-align: center; 
+    }
+}
+
+.animate-svg {
+    transition: transform ease-in-out; 
+}
