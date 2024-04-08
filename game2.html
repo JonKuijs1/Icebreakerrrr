@@ -13,6 +13,9 @@
   </style>
 </head>
 <body>
+  <div class="backbuttoncontainer">
+    <a href="gameselector.html" class="backbutton"><img src="images/chevronleft.svg" alt=""></a>
+    </div>
   <div class="container">
     <h1>Guess the Movie 🎬</h1>
     <div class="emoji-display" id="emojiDisplay"></div>
@@ -21,9 +24,9 @@
     <p id="result"></p>
     <div>
       <select id="levelSelect">
-        <option value="Easy">Easy</option>
-        <option value="Moderate">Moderate</option>
-        <option value="Hard">Hard</option>
+        <option value="Easy" class="easy">Easy</option>
+        <option value="Moderate" class="moderate">Moderate</option>
+        <option value="Hard" class="hard">Hard</option>
       </select>
       <button id="newMovieButton" onclick="newMovie()">New Movie</button>
     </div>

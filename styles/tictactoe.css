@@ -1,0 +1,112 @@
+.container {
+    text-align: center;
+    margin-top: 48px;
+
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    margin: 20px auto;
+    border: 2px solid rgb(255, 255, 255);
+    width: 310px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: pink; /* Change background color to pink */
+}
+
+.cell.X::after {
+    color: #676767; /* Dark grey color for 'X' */
+}
+
+.cell.O::after {
+    color: #ececec; /* Light white color for 'O' */
+}
+
+.cell:nth-child(odd) {
+    background-color: rgb(163, 163, 255); /* Change background color to blue for odd-indexed cells */
+}
+
+button {
+    background-color: none;
+    color: black;
+    border-radius: 50px;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    border: 1px solid black;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    
+    font-weight: bold; /* Set font weight to bold */
+}
+
+@keyframes winAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.win {
+    animation: winAnimation 0.5s ease-in-out;
+}
+
+.spacer {
+    height: 30px; /* Height as needed */
+}
+
+.turn-text {
+    font-size: 25px; /* Set the font size to 50px */
+    animation: blink 2s infinite; /* Apply blink animation */
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@media (width <= 900px) {
+   body {
+    
+   
+
+    .container {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        button {
+            margin-top: 12px;
+        }
+    }
+    
+    .board {
+        margin: 0;  
+    }
+   } 
+}

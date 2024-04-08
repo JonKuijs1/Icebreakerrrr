@@ -70,3 +70,15 @@ const movies = [
   
   // Initial setup
   window.onload = newMovie;
+
+
+  document.getElementById('difficulty').addEventListener('change', function () {
+    this.style.color = this.options[this.selectedIndex].getAttribute('data-color');
+  });
+  
+  // Initial color setting based on the selected value on page load
+  window.onload = function() {
+    var selectElement = document.getElementById('difficulty');
+    selectElement.style.color = selectElement.options[selectElement.selectedIndex].getAttribute('data-color');
+  };
+  

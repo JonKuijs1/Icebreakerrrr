@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/tictactoe.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: "League Spartan", sans-serif;
+      }
+    </style>
+</head>
+<body>
+    <div class="backbuttoncontainer">
+        <a href="gameselector.html" class="backbutton"><img src="images/chevronleft.svg" alt=""></a>
+        </div>
+    <div class="container">
+        <h1>⚡ Tic Tac Toe</h1>
+        <div id="board" class="board">
+            <div class="cell" onclick="makeMove(0)"></div>
+            <div class="cell" onclick="makeMove(1)"></div>
+            <div class="cell" onclick="makeMove(2)"></div>
+            <div class="cell" onclick="makeMove(3)"></div>
+            <div class="cell" onclick="makeMove(4)"></div>
+            <div class="cell" onclick="makeMove(5)"></div>
+            <div class="cell" onclick="makeMove(6)"></div>
+            <div class="cell" onclick="makeMove(7)"></div>
+            <div class="cell" onclick="makeMove(8)"></div>
+        </div>
+        <button onclick="resetGame()">Reset Game</button>
+        <div class="spacer"></div> <!-- First empty div for spacing -->
+        <div id="turnText" class="turn-text">It's X's Turn 💬</div> <!-- Turn text -->
+        <div class="spacer"></div> <!-- Second empty div for spacing -->
+    </div>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <!-- Popup content goes here -->
+        </div>
+    </div>
+    <audio id="winSound">
+        <source src="soundes/win_sound.mp3" type="audio/mpeg">
+    </audio>    
+    <script src="script/tictactoe.js"></script>
+   
+    <audio id="xMoveSound">
+        <source src="soundes/x_move_sound.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="oMoveSound">
+        <source src="soundes/o_move_sound.mp3" type="audio/mpeg">
+    </audio>
+
+</body>
+</html>

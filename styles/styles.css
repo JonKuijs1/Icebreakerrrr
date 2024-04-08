@@ -1,11 +1,15 @@
 /* This is gonna be the general css so fonts etc think about it this way in a word document you want all your
 heading 1s to look the same way we can use one line here to set the right size in every page */
-
+body {
+  font-family: "League Spartan", sans-serif;
+}
 
 .backbutton {
     width: 14px;
+    height: auto;
     display: flex;
     align-items: center;
+   
   }
 
   .backbuttoncontainer {
@@ -17,6 +21,7 @@ heading 1s to look the same way we can use one line here to set the right size i
     margin-top: 20px;
     top: 0;
     left: 0;
+    z-index: 100;
   }
 
   .primarybutton {
